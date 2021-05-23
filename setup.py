@@ -3,7 +3,7 @@ import pathlib
 project_root_path = pathlib.Path(__file__).parent
 
 # read VERSION
-with open(project_root_path.joinpath("VERSION"), 'r') as fd:
+with open(project_root_path.joinpath("clickapptest", "VERSION"), 'r') as fd:
     VERSION = fd.readline().rstrip('\n')
 
 setup(
@@ -24,6 +24,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        clickapptest=clickapptest:clickapptest
+        clickapptest=clickapptest.clickapptest:clickapptest
     ''',
 )

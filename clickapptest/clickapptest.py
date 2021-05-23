@@ -1,8 +1,8 @@
 import click
 import pathlib
 
-from src.tool1 import tool1
-from src.tool2 import tool2
+from lib.tool1 import tool1
+from lib.tool2 import tool2
 
 
 @click.group()
