@@ -1,4 +1,5 @@
 import click
+import pathlib
 
 from src.tool1 import tool1
 from src.tool2 import tool2
@@ -7,9 +8,18 @@ from src.tool2 import tool2
 @click.group()
 def clickapptest():
     """
-    This is a sample click test
+    This is a sample click test (v{VERSION})
     """
     pass
+
+
+@clickapptest.command()
+def version():
+    """ print version"""
+    project_root_path = pathlib.Path(__file__).parent
+    with open(project_root_path.joinpath("VERSION"), 'r') as fd:
+        VERSION = fd.readline().rstrip('\n')
+        click.echo(f"v{VERSION}")
 
 
 @clickapptest.command()
