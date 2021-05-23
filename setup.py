@@ -10,6 +10,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        clickapptest=clickapptest:cli
+        clickapptest=clickapptest:clickapptest
     ''',
 )
