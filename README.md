@@ -25,3 +25,9 @@ run test1 for takashi!!!
  
 >$ clickapptest run-test2 -n 4
 run test2!!!run test2!!!run test2!!!run test2!!!
+
+# Bash Completion
+
+add this in your .bashrc
+
+> eval "$(_CLICKAPPTEST_COMPLETE=bash_source clickapptest)"
