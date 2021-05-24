@@ -2,7 +2,7 @@ import click
 import pathlib
 
 from clickapptest.lib.tool1 import tool1
-from clickapptest.tool2 import tool2
+from clickapptest.lib.tool2 import tool2
 
 
 @click.group()
