@@ -18,7 +18,7 @@ setup(
     python_requires='>3.7.0',
     packages=find_packages(),
     include_package_data=True,
-    py_modules=['clickapptest', 'lib'],
+    py_modules=['clickapptest'],
     install_requires=[
         'Click',
     ],
