@@ -3,6 +3,12 @@ A click based cli app test
 
 # How to install
 
+Install stable release:
+
+>$pip install git+https://github.com/AtsushiSakai/clickapptest.git@v0.1.1
+
+Install master branch (This might be unstable)
+
 >$ pip install git+https://github.com/AtsushiSakai/clickapptest.git
 
 # Examples
