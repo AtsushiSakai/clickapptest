@@ -1,1 +1,1 @@
-from .lib import lib
+from clickapptest.lib import lib
