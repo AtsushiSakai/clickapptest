@@ -1,8 +1,11 @@
 import click
 import pathlib
 
-from lib.tool1 import tool1
-from lib.tool2 import tool2
+try:
+    from lib.tool1 import tool1
+    from lib.tool2 import tool2
+except ImportError:
+    pass
 
 
 
