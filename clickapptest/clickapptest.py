@@ -1,12 +1,8 @@
 import click
 import pathlib
 
-try:
-    from lib.tool1 import tool1
-    from lib.tool2 import tool2
-except ImportError:
-    pass
-
+from clickapptest.lib.tool1 import tool1
+from lib.tool2 import tool2
 
 
 @click.group()

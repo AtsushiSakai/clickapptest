@@ -1,4 +1,4 @@
 from .lib import common
-from .lib.tool1 import test1
-from .lib.tool2 import test2
+from .lib import tool1
+from .lib import tool2
 
