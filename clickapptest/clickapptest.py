@@ -1,8 +1,12 @@
 import click
 import pathlib
 
-from clickapptest.lib.tool1 import tool1
-from clickapptest.lib.tool2 import tool2
+try:  # for pip package
+    from clickapptest.lib.tool1 import tool1
+    from clickapptest.lib.tool2 import tool2
+except ModuleNotFoundError:  # for local call
+    from lib.tool1 import tool1
+    from lib.tool2 import tool2
 
 
 @click.group()
