@@ -1,6 +1,6 @@
 
 # for common module use in other python scripts.
 try:  # for pip package
-    from clickapptest.common import common
+    from clickapptest.lib.common import common
 except ModuleNotFoundError:  # for local call
-    from common import common
+    from lib.common import common
