@@ -21,6 +21,7 @@ setup(
     py_modules=['clickapptest'],
     install_requires=[
         'Click',
+        'click-log',
     ],
     entry_points='''
         [console_scripts]

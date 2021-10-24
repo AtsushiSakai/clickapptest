@@ -1,5 +1,9 @@
 import click
 import pathlib
+import click_log
+import logging
+logger = logging.getLogger(__name__)
+click_log.basic_config(logger)
 
 try:  # for pip package
     from clickapptest.lib.tool1 import tool1
@@ -11,6 +15,7 @@ except ModuleNotFoundError:  # for local call
     from lib.tool3 import tool3
 
 
+
 @click.group()
 def clickapptest():
     """
@@ -20,12 +25,21 @@ def clickapptest():
 
 
 @clickapptest.command()
+@click_log.simple_verbosity_option(logger)
 def version():
     """ print version"""
     project_root_path = pathlib.Path(__file__).parent
     with open(project_root_path.joinpath("VERSION"), 'r') as fd:
         VERSION = fd.readline().rstrip('\n')
         click.echo(f"v{VERSION}")
+
+@clickapptest.command()
+@click_log.simple_verbosity_option(logger)
+def loggertest():
+    logger.debug("aaa")
+    logger.info("aaa")
+    logger.warning("aaa")
+    logger.error("aaa")
 
 
 @clickapptest.command()
