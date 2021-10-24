@@ -1,7 +1,9 @@
-import click
+import sys
 import pathlib
-import click_log
 import logging
+import click_log
+import click
+import platform
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
 
@@ -31,7 +33,13 @@ def version():
     project_root_path = pathlib.Path(__file__).parent
     with open(project_root_path.joinpath("VERSION"), 'r') as fd:
         VERSION = fd.readline().rstrip('\n')
-        click.echo(f"v{VERSION}")
+        click.echo(f"=== Version info ===")
+        click.echo(f"clickapptest: {VERSION}")
+        click.echo(f"OS: {platform.platform()}")
+        click.echo(f"Python: {sys.version_info}")
+        click.echo(f"Click: {click.__version__}")
+        click.echo(f"click_log: {click_log.__version__}")
+
 
 @clickapptest.command()
 @click_log.simple_verbosity_option(logger)

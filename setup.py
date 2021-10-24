@@ -20,7 +20,7 @@ setup(
     include_package_data=True,
     py_modules=['clickapptest'],
     install_requires=[
-        'Click',
+        'Click==7.1.2',
         'click-log',
     ],
     entry_points='''
